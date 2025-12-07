@@ -1,0 +1,26 @@
+"Product"
+
+new "Marketing"()
+
+
+Product -> Marketing.Review(newProposal){
+  Marketing -> Product:RequestAmendment
+  Product -> Marketing:Review(updatedProposal)
+  return Approval
+}
+
+new Finance()
+
+Product -> Finance.Review(newProposal){
+  Finance -> Product:RequestAmendment
+  Product -> Finance:Review(updatedProposal)
+  return Approval
+}
+
+new Legal()
+
+Product -> Legal.Review(newProposal){
+  Legal -> Product:RequestAmendment
+  Product -> Legal:Review(updatedProposal)
+  return Approval
+}

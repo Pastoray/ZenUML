@@ -1,0 +1,11 @@
+@Client "Client"
+@Server "Server"
+
+// Step 1
+"Client" -> "Server".SYN(){
+  // Step 2
+  @return "Server"->"Client": SYN-ACK
+}
+
+// Step 3
+"Client" -> "Server": ACK
